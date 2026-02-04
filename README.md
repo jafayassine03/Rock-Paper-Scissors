@@ -41,11 +41,12 @@ This project is designed for beginners to practice core C concepts in a fun and 
 ## ▶️ How to Compile and Run
 
 ```bash
+gcc rps.c -o rps
+./rps
 
 
 License
 
 Totally free to use! Play around with it and make it your own 😄
 
-gcc rps.c -o rps
-./rps
+
