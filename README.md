@@ -1,12 +1,20 @@
 Rock Paper Scissors – Yassine Challenge 👑
 
-A terminal-based Rock Paper Scissors game written in C, featuring custom dialogue, score tracking, and dynamic rounds.
+Updated Version – Improved Gameplay
 
-This version includes 3 minimum rounds, handles draws, and ensures that a crown is always awarded to the final winner.
+This is an updated version of the terminal-based Rock Paper Scissors game in C, featuring:
 
-Perfect for beginners to practice C programming concepts in a fun and interactive way.
+Minimum 3 rounds with dynamic handling of draws
 
-🧠 Game Rules
+Score tracking
+
+Clear winner always gets the crown 👑
+
+Fun and interactive messages during rounds
+
+This version improves the original by making the gameplay more fair, fun, and polished.
+
+🧠 Game Rules (Updated)
 
 Rock beats Scissors
 
@@ -16,39 +24,25 @@ Paper beats Rock
 
 Minimum 3 rounds are played
 
-Draws do not count as wins but are allowed
+Draws are allowed but do not count as wins
 
-If after 3 rounds both players have equal wins, extra rounds are played until someone is ahead
+If after 3 rounds both players are tied, extra rounds are played until a winner emerges
 
-The winner takes the crown 👑
+Winner takes the crown 👑
 
-🎮 Gameplay Overview
+🎮 What’s New in This Version
 
-The game starts with Yassine introducing himself:
+Player enters their name, Yassine introduces the challenge
 
-"Hello! My name is Yassine and I wanna beat you at Rock Paper Scissors."
+Each round announces the round winner and updates the score
 
-The player enters their name. Yassine explains the rules and sets up the challenge.
+Draws are displayed but don’t count toward total wins
 
-Each round:
+After minimum 3 rounds, the game ensures a clear winner
 
-Player chooses Rock, Paper, or Scissors
+Improved messages for winning and losing rounds, more fun and interactive
 
-Yassine randomly chooses
-
-The round result is displayed
-
-Scores are updated
-
-Draws are announced but do not count toward the 3-round total, allowing for extra rounds if necessary.
-
-After 3 rounds (or more if needed), the winner is declared and awarded the crown:
-
-Player wins → "CONGRATS <name>! You beat Yassine and take the crown 👑"
-
-Yassine wins → "Yassine dominates the game and takes the crown 👑. Better luck next time, <name>!"
-
-🛠️ Concepts Used
+🛠️ Concepts Practiced
 
 Loops (while)
 
@@ -63,14 +57,7 @@ Score tracking
 Terminal-based interaction
 
 ▶️ How to Compile and Run
-
-Compile the code:
-
 gcc rps_yassine.c -o rps
-
-
-Run the game:
-
 ./rps
 
 License
