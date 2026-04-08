@@ -2,11 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define MAX_ROUNDS 100
+
 int main() {
     int player, yassine;
     int playerScore = 0, yassineScore = 0;
     int round = 1;
     char name[30];
+    char roundResults[MAX_ROUNDS][50]; // store results of each round
 
     srand(time(NULL));
 
@@ -50,6 +53,7 @@ int main() {
 
         if (player == yassine) {
             printf("Result: Draw! No one scores.\n");
+            snprintf(roundResults[round-1], 50, "Round %d: Draw", round);
         }
         else if (
             (player == 1 && yassine == 3) ||
@@ -58,10 +62,12 @@ int main() {
         ) {
             playerScore++;
             printf("Result: %s wins this round\n", name);
+            snprintf(roundResults[round-1], 50, "Round %d: %s wins", round, name);
         }
         else {
             yassineScore++;
             printf("Result: Yassine wins this round\n");
+            snprintf(roundResults[round-1], 50, "Round %d: Yassine wins", round);
         }
 
         printf("Score -> %s: %d | Yassine: %d\n",
@@ -78,13 +84,19 @@ int main() {
 
     printf("\n=====================================\n");
     if (playerScore > yassineScore)
-        printf(" CONGRATS %s! You beat Yassine and take the crown \n"", name);
+        printf(" CONGRATS %s! You beat Yassine and take the crown ??\n", name);
     else
-        printf("Yassine dominates the game and takes the crown Better luck next time, ??\n");
+        printf("Yassine dominates the game and takes the crown. Better luck next time!\n");
 
     printf("Final Score : %s: %d | Yassine: %d\n",
            name, playerScore, yassineScore);
-    printf("GG Bro.\n");
+
+    printf("\n?? Round History:\n");
+    for (int i = 0; i < round; i++) {
+        printf("%s\n", roundResults[i]);
+    }
+
+    printf("\nGG Bro.\n");
     printf("=====================================\n");
 
     return 0;
